@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="358.0" prefWidth="338.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dam.dam_distributeur.DistributorController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="welcomeText" />
+    <ScrollPane fx:id="spChart" prefHeight="200.0" prefWidth="200.0">
+      <content>
+         <VBox fx:id="vbChart" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" />
+      </content></ScrollPane>
+   <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+      <children>
+         <ComboBox fx:id="cmbAddProduct" onAction="#cmbAddProductClick" prefWidth="150.0" promptText="Choisissez" />
+         <Button fx:id="btnEmptyCart" contentDisplay="TOP" mnemonicParsing="false" onAction="#btnEmptyCartClick" text="Vider le panier" />
+      </children>
+   </HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+      <children>
+         <Label text="Le montant de votre  panier s'élève à" />
+         <Label fx:id="lblPrice" text="0,00 €" />
+      </children>
+   </HBox>
+    <Button fx:id="btnPay" onAction="#btnPayClick" text="Payer" />
+</VBox>
